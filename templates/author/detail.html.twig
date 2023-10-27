@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Author: {{ author.username }}{% endblock %}
+
+{% block body %}
+    <h1>Author: {{ author.username }}</h1>
+
+    <table class="table" border="2">
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <td>{{ author.id }}</td>
+            </tr>
+            <tr>
+                <th>Username</th>
+                <td>{{ author.username }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ author.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('listau') }}">Back to the list</a>
+</div>
+{% endblock %}

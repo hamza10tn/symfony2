@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Author{{ author.username}}{% endblock %}
+
+{% block body %}
+	<h1>Edit Author{{ author.username }}</h1>
+	
+    {{ form_start(form) }}
+	{{ form_widget(form) }}
+
+	<button type="submit" class="btn btn-primary">Save</button>
+	<a href="{{ path('listau') }}">Cancel</a>
+
+	{{ form_end(form) }}
+{% endblock %}

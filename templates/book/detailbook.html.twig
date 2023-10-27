@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Book: {{ book.title }}{% endblock %}
+
+{% block body %}
+    <h1>Book: {{ book.title }}</h1>
+
+    <table class="table" border="2">
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <td>{{ book.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ book.title }}</td>
+            </tr>
+            <tr>
+                <th>Publication Date</th>
+                <td>{{ book.publicationDate | date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>isPublished</th>
+                <td>{{ book.published }}</td>
+            </tr>
+             <tr>
+                <th>Category</th>
+                <td>{{ book.category }}</td>
+            </tr>
+          <tr>
+                <th>Author</th>
+                <td>{{ book.authors.username}}</td>
+            </tr>
+             <tr>
+                <th>Author</th>
+                <td>{{ book.Reader.username}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('fetchbook') }}">Back to the list</a>
+</div>
+{% endblock %}
